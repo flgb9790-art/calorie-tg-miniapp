@@ -31,13 +31,7 @@ async function sendWelcome(bot, chatId, webAppUrl) {
       ],
     },
   };
-  const logoPhotoPath = path.join(
-    process.env.LOCALAPPDATA || "",
-    "Temp",
-    "cursor",
-    "screenshots",
-    "logo-calory-mark-v3-bot-card-light.png"
-  );
+  const logoPhotoPath = path.join(__dirname, "public", "logo-calory-mark-v3-bot-card-light.png");
   const logoDocumentPath = path.join(__dirname, "public", "logo-calory-mark-v3.svg");
 
   if (fs.existsSync(logoPhotoPath)) {
