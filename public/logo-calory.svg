@@ -1,0 +1,39 @@
+<svg width="512" height="512" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="calory-ring" x1="45" y1="37" x2="143" y2="161" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#99E232"/>
+      <stop offset="1" stop-color="#22C9DF"/>
+    </linearGradient>
+    <linearGradient id="calory-leaf" x1="118" y1="26" x2="164" y2="73" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9DE52C"/>
+      <stop offset="1" stop-color="#44D447"/>
+    </linearGradient>
+  </defs>
+  <circle
+    cx="95"
+    cy="102"
+    r="58"
+    stroke="url(#calory-ring)"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-dasharray="288 86"
+    transform="rotate(-78 95 102)"
+  />
+  <path
+    d="M119 67C119 49 133 35 165 27C165 58 153 74 132 79C124 81 119 78 119 67Z"
+    fill="url(#calory-leaf)"
+  />
+  <path
+    d="M127 79L149 57"
+    stroke="#17171B"
+    stroke-width="2.7"
+    stroke-linecap="round"
+    opacity="0.9"
+  />
+  <path
+    d="M96 105L129 73C131 70 136 72 134 76L108 110C107 112 105 113 103 113H96C91 113 88 109 89 105C90 104 92 104 96 105Z"
+    fill="#202026"
+  />
+  <circle cx="96" cy="105" r="12" fill="#202026"/>
+  <circle cx="96" cy="105" r="4.3" fill="#F8FAFC"/>
+</svg>
