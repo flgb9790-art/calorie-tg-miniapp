@@ -9,13 +9,14 @@ const __dirname = path.dirname(__filename);
 
 function welcomeText() {
   return [
-    "<b>Calory</b> — мини-приложение для удобного подсчёта калорий.",
+    "<b>Calory</b> — мини-приложение для удобного контроля питания и калорий.",
     "",
     "Что внутри:",
-    "• быстрый дневник еды и приёмов пищи",
+    "• быстрый дневник еды текстом и по фото",
     "• подсчёт калорий и БЖУ",
     "• сохранённые блюда и порции",
     "• история по дням и личная цель",
+    "• AI-ассистент с советами и идеями блюд",
     "",
     "Нажми кнопку ниже, чтобы открыть приложение.",
   ].join("\n");
@@ -36,10 +37,18 @@ async function sendWelcome(bot, chatId, webAppUrl) {
 
   if (fs.existsSync(logoPhotoPath)) {
     try {
-      await bot.sendPhoto(chatId, logoPhotoPath, {
-        ...options,
-        caption: text,
-      });
+      await bot.sendPhoto(
+        chatId,
+        fs.createReadStream(logoPhotoPath),
+        {
+          ...options,
+          caption: text,
+        },
+        {
+          filename: "calory-welcome-v2.png",
+          contentType: "image/png",
+        }
+      );
       return;
     } catch (e) {
       console.warn("[бот] Не удалось отправить логотип в приветствии:", e?.message || e);
